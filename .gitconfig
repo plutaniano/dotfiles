@@ -1,0 +1,5 @@
+[user]
+	email = github@lucas.rs
+	name = Lucas R.
+[init]
+	defaultBranch = master
