@@ -14,3 +14,4 @@ bind '"\t":menu-complete'
 # ignore casing when autocompleting
 bind 'set completion-ignore-case on'
 
+PATH=$PATH:~/bin/
