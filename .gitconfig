@@ -1,19 +1,19 @@
 [alias]
-	l = log --pretty=oneline -n 20 --graph --abbrev-commit
-	s = status --short
-	ca = !git add --all && git commit --all --verbose
+    l = log --pretty=oneline -n 20 --graph --abbrev-commit
+    s = status --short
+    ca = !git add --all && git commit --all --verbose
     branches = branch --all
-	remotes = remote --verbose
+    remotes = remote --verbose
 
 [user]
-	email = github@lucas.rs
-	name = Lucas R.
+    email = github@lucas.rs
+    name = Lucas R.
 
 [core]
-	excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore
 
 [init]
-	defaultBranch = master
+    defaultBranch = master
 
 [color "branch"]
     current = yellow reverse
@@ -32,6 +32,7 @@
     untracked = cyan
 
 [url "git@github.com:"]
-	insteadOf = "gh:"
-	pushInsteadOf = "github:"
-	pushInsteadOf = "git://github.com/"
+    insteadOf = "gh:"
+    pushInsteadOf = "github:"
+    pushInsteadOf = "git://github.com/"
+
