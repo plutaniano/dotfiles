@@ -6,8 +6,8 @@
     remotes = remote --verbose
 
 [user]
-    email = github@lucas.rs
-    name = Lucas R.
+    email = git@lucas.rs
+    name = Lucas Rodrigues
 
 [core]
     excludesfile = ~/.gitignore
