@@ -27,7 +27,8 @@ set formatoptions=tcqn1     " t - autowrap normal text
 set hidden                  " Don't prompt to save hidden windows until exit
 set history=200             " How many lines of history to save
 set hlsearch                " Hilight searching
-set ignorecase              " Case insensitive
+set ignorecase              " Case insensitive searching
+set smartcase               " Case sensitive when uppercase letter entered
 set incsearch               " Search as you type
 set infercase               " Completion recognizes capitalization
 set laststatus=2            " Always show the status bar
