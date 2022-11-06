@@ -137,5 +137,5 @@ bindkey "^E" edit-command-line
 setopt no_beep
 
 # My stuff
-export PATH=$PATH:$HOME/bin:/Users/lucas/.local/bin # :/usr/local/bin
+export PATH=$PATH:$HOME/bin:$HOME/.local/bin
 

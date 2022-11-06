@@ -1,6 +1,7 @@
 [alias]
     l = log --pretty=oneline -n 20 --graph --abbrev-commit
     s = status --short
+    d = diff
     ca = !git add --all && git commit --all --verbose
     branches = branch --all
     remotes = remote --verbose

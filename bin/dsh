@@ -9,3 +9,4 @@ if [[ -n "$containerId" ]]; then
 else
     echo "No docker container with name: $name is running"
 fi
+

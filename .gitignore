@@ -1,3 +1,4 @@
+.ipython/profile_defaults/startup/README
 *.pyc
 .vscode/
 build/
