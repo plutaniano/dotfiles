@@ -32,6 +32,7 @@ return packer.startup(function(use)
 
     -- plugins go here
     use("bluz71/vim-nightfly-guicolors")
+    use("tanvirtin/monokai.nvim")
     use("christoomey/vim-tmux-navigator")
     use("szw/vim-maximizer")
     use("tpope/vim-surround")
