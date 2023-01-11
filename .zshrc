@@ -105,9 +105,9 @@ PS1='%F{green}%n@%m%f %F{blue}%~%f %F{magenta}%#%f '
 
 # ALIASES
 alias py=ipython
-alias python=python3
 alias isodate="date +%Y-%m-%dT%H:%M:%S%z"
 alias notify="terminal-notifier -sound Glass -message Done - $?"
+alias vim=nvim
 
 ## Verbose
 alias chmod="chmod -v"
