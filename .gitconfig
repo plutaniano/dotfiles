@@ -7,7 +7,6 @@
     remotes = remote --verbose
 
 [user]
-    email = git@lucas.rs
     name = Lucas Rodrigues
 
 [core]
