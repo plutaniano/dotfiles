@@ -6,6 +6,7 @@
 !.ssh/
 !bin/
 !.gitconfig
+!.gitignore
 !.hushlogin
 !.psqlrc
 !.tmux.conf
