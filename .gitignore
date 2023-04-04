@@ -2,7 +2,7 @@
 *
 
 # except...
-!.config/
+!.config/*
 !.ssh/
 !bin/
 !.gitconfig
