@@ -104,9 +104,11 @@ PS1='%F{green}%n@%m%f %F{blue}%~%f %F{magenta}%#%f '
 
 
 # ALIASES
-alias py=ipython
 alias isodate="date +%Y-%m-%dT%H:%M:%S%z"
+alias k=kubectl
 alias notify="terminal-notifier -sound Glass -message Done - $?"
+alias py=ipython
+alias tf=terraform
 alias vim=nvim
 
 ## Verbose
