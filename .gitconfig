@@ -10,7 +10,7 @@
     name = Lucas Rodrigues
 
 [core]
-    excludesfile = ~/.gitignore
+    excludesfile = ~/.globalgitignore
 
 [init]
     defaultBranch = master

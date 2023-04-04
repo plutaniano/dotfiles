@@ -1,6 +1,13 @@
-.ipython/profile_defaults/startup/README
-*.pyc
-.vscode/
-build/
-.DS_Store
-id_rsa
+# Ignore everything
+*
+
+# except...
+!.config/
+!.ssh/
+!bin/
+!.gitconfig
+!.hushlogin
+!.psqlrc
+!.tmux.conf
+!.zshrc
+!Brewfile
