@@ -1,0 +1,8 @@
+.ipython/profile_defaults/startup/README
+*.pyc
+.vscode/
+build/
+.DS_Store
+.ssh/id_rsa
+.ssh/known_hosts
+

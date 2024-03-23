@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+#
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -102,12 +103,17 @@ source $ZSH/oh-my-zsh.sh
 
 PS1='%F{green}%n@%m%f %F{blue}%~%f %F{magenta}%#%f '
 
+if [ -n "$SSH_CLIENT" ]; then
+    PS1="%B%K{red}%F{white}[SSH]%f%k%b ${PS1}"
+fi
 
 # ALIASES
 alias isodate="date +%Y-%m-%dT%H:%M:%S%z"
 alias k=kubectl
 alias notify="terminal-notifier -sound Glass -message Done - $?"
+alias pg=pgcli
 alias py=ipython
+alias python=python3
 alias tf=terraform
 alias vim=nvim
 

@@ -8,6 +8,7 @@
 
 [user]
     name = Lucas Rodrigues
+    email = git@lucas.rs
 
 [core]
     excludesfile = ~/.globalgitignore
