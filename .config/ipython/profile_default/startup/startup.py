@@ -5,6 +5,7 @@ import math
 import operator
 import os
 import random
+import re
 import sys
 import time
 from collections import Counter
