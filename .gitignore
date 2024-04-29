@@ -4,7 +4,7 @@
 .vscode/
 .DS_Store
 .ssh/id_rsa
+.ssh/id_rsa.pub
 .ssh/known_hosts
-
 .config/ipython/profile_default/history.sqlite
 .config/ipython/profile_default/README
