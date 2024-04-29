@@ -1,7 +1,7 @@
-.ipython/profile_defaults/startup/README
+.config/ipython/profile_default/history.sqlite
+.config/ipython/profile_default/startup/README
 *.pyc
 .vscode/
-build/
 .DS_Store
 .ssh/id_rsa
 .ssh/known_hosts
