@@ -13,27 +13,8 @@
 [core]
     excludesfile = ~/.globalgitignore
 
-[init]
-    defaultBranch = master
+[includeIf "gitdir:~/blue3/"]
+    path = ~/blue3/.gitconfig
 
-[color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
-
-[color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red
-    new = green
-
-[color "status"]
-    added = yellow
-    changed = green bold
-    untracked = cyan
-
-[url "git@github.com:"]
-    insteadOf = "gh:"
-    pushInsteadOf = "github:"
-    pushInsteadOf = "git://github.com/"
-
+[includeIf "gitdir:~/playon/"]
+    path = ~/playon/.gitconfig
