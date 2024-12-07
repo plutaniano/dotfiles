@@ -125,17 +125,13 @@ alias mv="mv -v"
 
 ## Humanize
 alias df="df -H"
-alias ls="exa"
+alias ls="eza"
 
 
 # prints which process is listening on port $1
 port () {
     lsof -i -P | grep LISTEN | grep :$1
 }
-
-# vim mode in zsh
-bindkey -v
-export KEYTIMEOUT=1
 
 # ctrl+E to edit command in vim
 autoload -z edit-command-line
