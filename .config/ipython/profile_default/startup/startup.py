@@ -14,6 +14,10 @@ from contextlib import suppress
 from decimal import Decimal
 from functools import reduce
 from pathlib import Path
+from typing import Any, TypedDict
+
+with suppress(ImportError):
+    from pydantic import BaseModel, Field, TypeAdapter, BeforeValidator, AfterValidator
 
 with suppress(ImportError):
     from django.db.models import Avg, Count, F, Max, Min, Q, Sum, Value
@@ -25,3 +29,9 @@ with suppress(ImportError):
         TruncMonth,
         TruncYear,
     )
+
+def dump_json(path: str, var: Any) -> None:
+    Path(path).write_text(json.dumps(var))
+
+def load_json(path: str) -> Any:
+    return json.loads(Path(path).read_text())
