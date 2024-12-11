@@ -17,3 +17,9 @@ defaults write -g KeyRepeat -int 2
 # Dock autohide
 defaults write com.apple.dock autohide -bool true
 
+# Show battery percentage
+defaults -currentHost write com.apple.controlcenter.plist BatteryShowPercentage -bool true
+
+# Remove bottom right hot corner
+defaults write com.apple.dock wvous-br-corner -int 0
+
