@@ -8,10 +8,12 @@
 
 [user]
     name = Lucas Rodrigues
-    email = git@lucas.rs
 
 [core]
     excludesfile = ~/.globalgitignore
+
+[includeIf "gitdir:~/fun/"]
+    path = ~/fun/.gitconfig
 
 [includeIf "gitdir:~/blue3/"]
     path = ~/blue3/.gitconfig
