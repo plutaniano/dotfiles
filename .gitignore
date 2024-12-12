@@ -1,11 +1,13 @@
+*.pyc
+.DS_Store
+.config/AWS VPN Client/
+.config/AWSVPNClient/
+.config/ipython/profile_default/README
 .config/ipython/profile_default/history.sqlite
 .config/ipython/profile_default/startup/README
-*.pyc
-.vscode/
-.DS_Store
+.config/pgcli/
+.credentials
 .ssh/id_rsa
 .ssh/id_rsa.pub
 .ssh/known_hosts
-.config/ipython/profile_default/history.sqlite
-.config/ipython/profile_default/README
-.credentials
+.vscode/
