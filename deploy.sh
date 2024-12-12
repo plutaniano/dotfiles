@@ -6,6 +6,8 @@ set -euo pipefail
 /opt/homebrew/bin/brew upgrade
 /opt/homebrew/bin/brew bundle install
 
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # scroll direction
 defaults write -g com.apple.swipescrolldirection -boolean NO
@@ -23,3 +25,4 @@ defaults -currentHost write com.apple.controlcenter.plist BatteryShowPercentage 
 # Remove bottom right hot corner
 defaults write com.apple.dock wvous-br-corner -int 0
 
+stow . -t ~

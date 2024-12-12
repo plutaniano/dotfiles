@@ -14,10 +14,10 @@ from contextlib import suppress
 from decimal import Decimal
 from functools import reduce
 from pathlib import Path
-from typing import Any, TypedDict
+from typing import *
 
 with suppress(ImportError):
-    from pydantic import BaseModel, Field, TypeAdapter, BeforeValidator, AfterValidator
+    from pydantic import *
 
 with suppress(ImportError):
     from django.db.models import Avg, Count, F, Max, Min, Q, Sum, Value

@@ -1,0 +1,17 @@
+#! /bin/bash
+
+alias chmod="chmod -v"
+alias chown="chown -v"
+alias cp="cp -v"
+alias df="df -H"
+alias isodate="date +%Y-%m-%dT%H:%M:%S%z"
+alias k=kubectl
+alias ls="eza"
+alias lzd="lazydocker";
+alias mv="mv -v"
+alias pg=pgcli
+alias pip=pip3
+alias py=ipython
+alias python=python3
+alias tf=terraform
+alias vim=nvim

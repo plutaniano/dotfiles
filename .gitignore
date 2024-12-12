@@ -8,3 +8,4 @@
 .ssh/known_hosts
 .config/ipython/profile_default/history.sqlite
 .config/ipython/profile_default/README
+.credentials

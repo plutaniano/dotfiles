@@ -107,25 +107,6 @@ if [ -n "$SSH_CLIENT" ]; then
     PS1="%B%K{red}%F{white}[SSH]%f%k%b ${PS1}"
 fi
 
-# ALIASES
-alias isodate="date +%Y-%m-%dT%H:%M:%S%z"
-alias k=kubectl
-alias notify="terminal-notifier -sound Glass -message Done - $?"
-alias pg=pgcli
-alias py=ipython
-alias python=python3
-alias tf=terraform
-alias vim=nvim
-
-## Verbose
-alias chmod="chmod -v"
-alias chown="chown -v"
-alias cp="cp -v"
-alias mv="mv -v"
-
-## Humanize
-alias df="df -H"
-alias ls="eza"
 
 
 # prints which process is listening on port $1
