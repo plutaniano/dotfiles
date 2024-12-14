@@ -25,4 +25,10 @@ defaults -currentHost write com.apple.controlcenter.plist BatteryShowPercentage 
 # Remove bottom right hot corner
 defaults write com.apple.dock wvous-br-corner -int 0
 
+# Disable accented characters popup when holding keys
+defaults write -g ApplePressAndHoldEnabled -bool false
+
+# Fix Vim VSCode extesion key hold
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
 stow . -t ~
