@@ -20,15 +20,10 @@ with suppress(ImportError):
     from pydantic import *
 
 with suppress(ImportError):
-    from django.db.models import Avg, Count, F, Max, Min, Q, Sum, Value
-    from django.db.models.functions import (
-        Coalesce,
-        ExtractDay,
-        ExtractMonth,
-        ExtractYear,
-        TruncMonth,
-        TruncYear,
-    )
+    import polars as pl
+
+with suppress(ImportError):
+    import pandas as pd
 
 def dump_json(path: str, var: Any) -> None:
     Path(path).write_text(json.dumps(var))
