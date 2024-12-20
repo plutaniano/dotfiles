@@ -1,5 +1,6 @@
 #! /bin/bash
 
+alias cat=bat
 alias chmod="chmod -v"
 alias chown="chown -v"
 alias cp="cp -v"
@@ -9,7 +10,7 @@ alias k=kubectl
 alias ls="eza"
 alias lzd="lazydocker";
 alias mv="mv -v"
-alias pg=pgcli
+alias pg="uvx pgcli -D"
 alias pip=pip3
 alias python=python3
 alias tf=terraform
