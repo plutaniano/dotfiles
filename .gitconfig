@@ -1,5 +1,5 @@
 [alias]
-    l = log --pretty=oneline -n 20 --graph --abbrev-commit
+    l = "log --pretty=format:'%C(#cccc00)%h %Cred%ad %Creset%<(60,trunc)%s%C(auto)%d %C(magenta)%<(15,trunc)%ae' --date=format:'%Y-%m-%dT%H:%M:%S%z'"
     s = status --short
     d = diff
     ca = !git add --all && git commit --all --verbose
