@@ -114,11 +114,6 @@ port () {
     lsof -i -P | grep LISTEN | grep :$1
 }
 
-# ctrl+E to edit command in vim
-autoload -z edit-command-line
-zle -N edit-command-line
-bindkey "^E" edit-command-line
-
 setopt no_beep
 
 # My stuff

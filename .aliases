@@ -1,6 +1,6 @@
 #! /bin/bash
 
-alias aws="uvx --from awscli aws"
+alias aws="uvx --from awscli==1.38.4 aws"
 alias cat=bat
 alias chmod="chmod -v"
 alias chown="chown -v"
