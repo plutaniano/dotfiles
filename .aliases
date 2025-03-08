@@ -19,10 +19,10 @@ alias vim=nvim
 
 function py() {
   uvx \
-      --with fastexcel \
-      --with pandas \
-      --with polars \
-      --with pydantic \
+      --with fastexcel==0.13.0 \
+      --with pandas==2.2.3 \
+      --with polars==1.23.0 \
+      --with pydantic==2.10.6 \
       $@ \
       ipython
 }
