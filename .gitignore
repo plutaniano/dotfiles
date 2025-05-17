@@ -5,6 +5,7 @@
 .config/ipython/profile_default/README
 .config/ipython/profile_default/history.sqlite
 .config/ipython/profile_default/startup/README
+.config/ipython/profile_default/db/*
 .config/pgcli/
 .credentials
 .ssh/id_rsa
