@@ -1,0 +1,67 @@
+#! /usr/bin/env -S uv run --quiet --script
+# /// script
+# requires-python = "~=3.12"
+# dependencies = [
+#     "boto3==1.37.4",
+#     "fastexcel==0.13.0",
+#     "ipython==9.0.0",
+#     "polars==1.23.0",
+#     "pydantic==2.10.6",
+# ]
+# ///
+
+from pathlib import Path
+from sys import argv
+
+import boto3
+import IPython
+import polars as pl
+from pydantic import *  # noqa
+
+
+def main(bucket_name: str, key: str) -> None:
+    path = Path(key)
+    destination = Path("/tmp/") / path.name
+
+    match path.suffix:
+        case ".csv":
+            reader = pl.read_csv
+        case ".json":
+            reader = pl.read_json
+        case ".jsonl":
+            reader = pl.read_ndjson
+        case ".parquet":
+            reader = pl.read_parquet
+        case ".xlsx" | ".xls":
+            reader = pl.read_excel
+        case other:
+            raise ValueError(f"Reader não especificado para extensão: {other}")
+
+    if not destination.exists():
+        for profile in boto3.Session().available_profiles:
+            s3 = boto3.Session(profile_name=profile).client("s3")
+            try:
+                s3.download_file(
+                    Bucket=bucket_name,
+                    Key=str(path),
+                    Filename=str(destination),
+                )
+                break
+            except Exception:
+                continue
+        else:
+            Exception("Nenhum dos profiles disponíveis tem acesso ao arquivo")
+
+    print(f"Arquivo disponível em: {destination}")
+
+    df = reader(destination, infer_schema_length=None)
+    print(df)
+    IPython.embed(
+        colors="neutral",
+        display_banner=False,
+    )
+
+
+if __name__ == "__main__":
+    bucket, key = argv[1].removeprefix("s3://").split("/", maxsplit=1)
+    main(bucket, key)
