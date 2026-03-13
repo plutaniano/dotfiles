@@ -14,6 +14,9 @@ defaults write -g com.apple.swipescrolldirection -boolean NO
 defaults write -g InitialKeyRepeat -int 12
 defaults write -g KeyRepeat -int 2
 
+# disable "natural" mouse scroll direction
+defaults write -g com.apple.swipescrolldirection -bool false
+
 # Dock autohide
 defaults write com.apple.dock autohide -bool true
 
