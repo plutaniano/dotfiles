@@ -119,3 +119,6 @@ setopt no_beep
 # My stuff
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin
 
+# fix mac os tahoe lag
+launchctl setenv CHROME_HEADLESS 1
+

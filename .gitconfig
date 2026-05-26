@@ -1,5 +1,6 @@
 [alias]
     l = "log --pretty=format:'%C(#cccc00)%h %Cred%ad %Creset%<(60,trunc)%s%C(auto)%d %C(magenta)%<(15,trunc)%ae' --date=format:'%Y-%m-%dT%H:%M:%S%z'"
+    r = !git stash push -u -m "-" && git pull --rebase && git stash apply stash^{/-}
     s = status --short
     d = diff
     ca = !git add --all && git commit --all --verbose
@@ -22,6 +23,9 @@
 
 [merge]
     conflictstyle = zdiff3
+
+[blame]
+    ignoreRevsFile = :(optional).git-blame-ignore-rev
 
 [includeIf "gitdir:~/fun/"]
     path = ~/fun/.gitconfig

@@ -15,6 +15,7 @@ from sys import argv
 
 import boto3
 import IPython
+import gzip
 import polars as pl
 from pydantic import *  # noqa
 
@@ -23,16 +24,31 @@ def main(bucket_name: str, key: str) -> None:
     path = Path(key)
     destination = Path("/tmp/") / path.name
 
-    match path.suffix:
-        case ".csv":
+    config = {
+        "infer_schema_length": None,
+    }
+
+    compressed = False
+    match path.suffixes:
+        case [*_, ".csv"]:
             reader = pl.read_csv
-        case ".json":
+        case [*_, ".csv", ".gz"]:
+            compressed = True
+            reader = pl.read_csv
+        case [*_, ".json"]:
             reader = pl.read_json
-        case ".jsonl":
+        case [*_, ".json", ".gz"]:
+            compressed = True
+            reader = pl.read_json
+        case [*_, ".jsonl"]:
             reader = pl.read_ndjson
-        case ".parquet":
+        case [*_, ".jsonl", ".gz"]:
+            compressed = True
+            reader = pl.read_ndjson
+        case [*_, ".parquet"]:
+            del config["infer_schema_length"]
             reader = pl.read_parquet
-        case ".xlsx" | ".xls":
+        case [*_, ".xlsx" | ".xls"]:
             reader = pl.read_excel
         case other:
             raise ValueError(f"Reader não especificado para extensão: {other}")
@@ -54,7 +70,9 @@ def main(bucket_name: str, key: str) -> None:
 
     print(f"Arquivo disponível em: {destination}")
 
-    df = reader(destination, infer_schema_length=None)
+    if compressed:
+        destination = gzip.open(destination)
+    df = reader(destination, **config)
     print(df)
     IPython.embed(
         colors="neutral",

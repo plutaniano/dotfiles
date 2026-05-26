@@ -30,3 +30,9 @@ def dump_json(path: str, var: Any) -> None:
 
 def load_json(path: str) -> Any:
     return json.loads(Path(path).read_text())
+
+# Copy-pasting JSON directly into the REPL
+true = True
+false = False
+null = None
+
